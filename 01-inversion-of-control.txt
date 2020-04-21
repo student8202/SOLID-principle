@@ -1,7 +1,7 @@
 1. Java Inversion control
 The approach of outsourcing the construction and management of objects.
 
-sumary: outsource to an object factory
+summary: outsource to an object factory
 example: with a very rough prototype
 
 My App <-> getDailyWorkout() <-> BaseballCoach
