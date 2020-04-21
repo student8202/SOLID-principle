@@ -8,14 +8,16 @@ Một class chỉ nên giữ một trách nhiệm duy nhất
 2. **Open/Closed Principle – Nguyên lý Đóng Mở**. Nội dung nguyên lý:
 ```
 Có thể thoải mái mở rộng 1 module, nhưng hạn chế sửa đổi bên trong module đó (open for extension but closed for modification).
-khẩu súng. Để bắn được xa hơn, ta có thể gắn thêm ống ngắm; để không gây tiếng động, ta có thể gắn nòng giảm thanh; để tăng số lượng đạn, ta có thể gắn thêm băng đạn phụ;
+khẩu súng. Để bắn được xa hơn, ta có thể gắn thêm ống ngắm; để không gây tiếng động, ta có thể gắn nòng giảm thanh; 
+để tăng số lượng đạn, ta có thể gắn thêm băng đạn phụ;
 // Ta có 3 class: vuông, tròn, tam giác, kế thừa class Shape (){ public double Area(); }
 // Chuyển logic tính diện tích vào mỗi class
 ```
 3. **Liskov Substitution Principle – Nguyên lý Thay Thế Lít Kốp**. Nội dung nguyên lý:
 ```
 Để giữ tính đúng đắn của chương trình, class con phải thay thế được class cha.
-Trong đời sống, A là B (chim cánh cụt là chim) không có nghĩa là class A nên kế thừa class B. Chỉ cho class A kế thừa class B khi class A thay thế được cho class B.
+Trong đời sống, A là B (chim cánh cụt là chim) không có nghĩa là class A nên kế thừa class B. 
+Chỉ cho class A kế thừa class B khi class A thay thế được cho class B.
 public class Bird {
   public virtual void Fly() { Console.Write("Fly"); }
 }
