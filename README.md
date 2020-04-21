@@ -12,4 +12,21 @@ khẩu súng. Để bắn được xa hơn, ta có thể gắn thêm ống ngắ
 // Ta có 3 class: vuông, tròn, tam giác, kế thừa class Shape (){ public double Area(); }
 // Chuyển logic tính diện tích vào mỗi class
 ```
+3. **Liskov Substitution Principle – Nguyên lý Thay Thế Lít Kốp**. Nội dung nguyên lý:
+```
+Để giữ tính đúng đắn của chương trình, class con phải thay thế được class cha.
+Trong đời sống, A là B (chim cánh cụt là chim) không có nghĩa là class A nên kế thừa class B. Chỉ cho class A kế thừa class B khi class A thay thế được cho class B.
+public class Bird {
+  public virtual void Fly() { Console.Write("Fly"); }
+}
+public class Eagle : Bird {
+  public override void Fly() { Console.Write("Eagle Fly"); }
+}
+public class Duck : Bird {
+  public override void Fly() { Console.Write("Duck Fly"); }
+}
+public class Penguin : Bird {
+  public override void Fly() { throw new NoFlyException(); }
+}
+```
 
