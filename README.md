@@ -36,3 +36,23 @@ Interface là một lớp rỗng chỉ chứa khai báo về tên phương thứ
 ```
 Điều này tương đương với việc nếu ta tạo ra 1 interface bự (hơn 100 method chẳng hạn), mỗi class sẽ phải implement toàn bộ 100 method đó, kể những method không bao giờ sử dụng đến. Nếu áp dụng ISP, ta sẽ chia interface này ra thành nhiều interface nhỏ, các class chỉ cần implement những interface có chức năng mà chúng cần, không cần phải implement những chức năng thừa nữa.
 ```
+5. **Dependency Inversion Principle – Nguyên lý Đảo Ngược Dependency**. Nội dung nguyên lý:
+```
+1. High-level modules should not depend on low-level modules. Both should depend on abstractions. 
+**High-lever module <-> abstract/interface <-> low-level module**
+Các module cấp cao không nên phụ thuộc vào các module cấp thấp. Cả 2 nên phụ thuộc vào abstraction (hay interface).
+2. Abstractions should not depend upon details. Details should depend upon abstractions. 
+Interface (abstraction) không nên phụ thuộc vào mô đun cụ thể, 
+mà ngược lại mô đun cụ thể phải phụ thuộc vào khung trìu tượng hoặc interface. 
+(Các class giao tiếp với nhau thông qua interface, không phải thông qua implementation.)
+```
+```
+Với cách code thông thường, các module cấp cao sẽ gọi các module cấp thấp. Module cấp cao sẽ phụ thuộc và module cấp thấp, điều đó tạo ra các dependency. Khi module cấp thấp thay đổi, module cấp cao phải thay đổi theo. Một thay đổi sẽ kéo theo hàng loạt thay đổi, giảm khả năng bảo trì của code.
+Example:
+Để kết nối tới database, ta chỉ cần gọi hàm Get, Save … của interface IDataAccess. Khi thay database, ta chỉ cần thay implementation của interface này.
+Coach Factory
+ICoach() {...}
+FootballCoach implements ICoach(){...}
+FitnessCoach implements ICoach(){...}
+CritketCoach implements ICoach(){...}
+```
