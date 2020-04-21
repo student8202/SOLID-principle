@@ -53,10 +53,14 @@ mà ngược lại mô đun cụ thể phải phụ thuộc vào khung trìu tư
 (Các class giao tiếp với nhau thông qua interface, không phải thông qua implementation.)
 ```
 ```
-Với cách code thông thường, các module cấp cao sẽ gọi các module cấp thấp. Module cấp cao sẽ phụ thuộc và module cấp thấp, điều đó tạo ra các dependency. Khi module cấp thấp thay đổi, module cấp cao phải thay đổi theo. Một thay đổi sẽ kéo theo hàng loạt thay đổi, giảm khả năng bảo trì của code.
+Với cách code thông thường, các module cấp cao sẽ gọi các module cấp thấp. 
+Module cấp cao sẽ phụ thuộc và module cấp thấp, điều đó tạo ra các dependency. 
+Khi module cấp thấp thay đổi, module cấp cao phải thay đổi theo. 
+Một thay đổi sẽ kéo theo hàng loạt thay đổi, giảm khả năng bảo trì của code.
 Example:
-Để kết nối tới database, ta chỉ cần gọi hàm Get, Save … của interface IDataAccess. Khi thay database, ta chỉ cần thay implementation của interface này.
-Coach Factory
+Để kết nối tới database, ta chỉ cần gọi hàm Get, Save … của interface IDataAccess. 
+Khi thay database, ta chỉ cần thay implementation của interface này.
+***Coach Factory***
 ICoach() {...}
 FootballCoach implements ICoach(){...}
 FitnessCoach implements ICoach(){...}
