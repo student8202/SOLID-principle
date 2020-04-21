@@ -29,4 +29,10 @@ public class Penguin : Bird {
   public override void Fly() { throw new NoFlyException(); }
 }
 ```
-
+4. **Interface Segregation Principle – Nguyên lý phân tách interface**. Nội dung nguyên lý:
+```
+Interface là một lớp rỗng chỉ chứa khai báo về tên phương thức không có khai báo về thuộc tính hay thứ gì khác và các phương thức này cũng là rỗng. Bởi vậy bất kỳ lớp nào sử dụng lớp interface đều phải định nghĩa các phương thức đã khai báo ở lớp interface.
+```
+```
+Điều này tương đương với việc nếu ta tạo ra 1 interface bự (hơn 100 method chẳng hạn), mỗi class sẽ phải implement toàn bộ 100 method đó, kể những method không bao giờ sử dụng đến. Nếu áp dụng ISP, ta sẽ chia interface này ra thành nhiều interface nhỏ, các class chỉ cần implement những interface có chức năng mà chúng cần, không cần phải implement những chức năng thừa nữa.
+```
