@@ -10,8 +10,9 @@ Một class chỉ nên giữ một trách nhiệm duy nhất
 Có thể thoải mái mở rộng 1 module, nhưng hạn chế sửa đổi bên trong module đó (open for extension but closed for modification).
 khẩu súng. Để bắn được xa hơn, ta có thể gắn thêm ống ngắm; để không gây tiếng động, ta có thể gắn nòng giảm thanh; 
 để tăng số lượng đạn, ta có thể gắn thêm băng đạn phụ;
-// Ta có 3 class: vuông, tròn, tam giác, kế thừa class Shape (){ public double Area(); }
+// Ta có 3 class: vuông, tròn, tam giác, kế thừa class IShape (){ public double Area(); }
 // Chuyển logic tính diện tích vào mỗi class
+public class Square implements IShape () {...}
 ```
 3. **Liskov Substitution Principle – Nguyên lý Thay Thế Lít Kốp**. Nội dung nguyên lý:
 ```
