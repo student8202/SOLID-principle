@@ -1,0 +1,7 @@
+# Does the Java language have delegate features, similar to how C# has support for delegates?
+
+You may be able to achieve the same effect by using reflection to get Method objects you can then invoke, 
+and the other way is to create an interface with a single 'invoke' or 'execute' method, 
+and then instantiate them to call the method your interested in (i.e. using an anonymous inner class).
+
+https://web.archive.org/web/20180506073221/http://www.onjava.com/pub/a/onjava/2003/05/21/delegates.html
